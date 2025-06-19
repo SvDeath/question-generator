@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор вопросов</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        #question {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">Нажми кнопку, чтобы получить вопрос</div>
+    <button onclick="showQuestion()">Следующий вопрос</button>
+
+    <script>
+        const questions = ['Назови 5 стран, граничащих с Россией.', 'Какой океан самый глубокий?', 'Что тяжелее: 1 кг железа или 1 кг ваты?', 'Назови столицу Австралии.', 'Сколько планет в солнечной системе?', 'Какая река самая длинная в мире?', 'Сколько зубов у взрослого человека?', "Кто написал 'Преступление и наказание'?", 'Какое химическое обозначение у воды?', 'Назови три элемента из таблицы Менделеева.', 'Что изучает биология?', 'Кто был первым человеком в космосе?', 'Сколько континентов на Земле?', 'Какая страна имеет самую большую площадь?', 'Кто изобрёл лампочку?', 'Назови самую высокую гору на планете.', 'Сколько времени свет идёт от Солнца до Земли?', 'Как зовут основателя компании Microsoft?', 'Что такое синус?', 'Сколько градусов в полном круге?', 'Назови любой язык программирования.', 'Что такое фотосинтез?', 'Какая валюта в Японии?', 'Сколько дней в високосном году?', "Кто написал 'Войну и мир'?", "Какой элемент обозначается как 'Fe'?", 'Какой орган отвечает за фильтрацию крови?', 'Что изучает астрономия?', 'Назови два произведения Шекспира.', 'Какая часть тела отвечает за равновесие?'];
+
+        function showQuestion() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById('question').innerText = questions[randomIndex];
+        }
+    </script>
+</body>
+</html>
